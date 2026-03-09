@@ -1,0 +1,187 @@
+:root {
+  --bg-dark: #0b0f14;
+  --card-dark: #111827;
+
+  /* 🔮 PURPLE THEME (name same rakha) */
+  --cyan: #a855f7;
+  --cyan-soft: rgba(168, 85, 247, 0.35);
+
+  --border-dark: #1f2937;
+  --text-main: #e5e7eb;
+  --text-muted: #9ca3af;
+}
+
+/* ===== Wrapper ===== */
+.fs-wrap {
+  width: 100vw;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  padding: 40px clamp(16px, 4vw, 40px);
+  background: var(--bg-dark);
+}
+
+/* ===== Headings ===== */
+.fs-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 18px;
+}
+
+.fs-head.cats {
+  margin-top: 48px;
+}
+
+.fs-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.fs-sub {
+  font-size: 13px;
+  color: var(--text-muted);
+}
+
+/* ===== Carousel ===== */
+.carousel-shell {
+  position: relative;
+  padding: 0 52px;
+}
+
+.carousel {
+  display: flex;
+  gap: 20px;
+  overflow-x: auto;
+  padding: 12px 2px;
+  scroll-behavior: smooth;
+}
+
+.carousel::-webkit-scrollbar {
+  display: none;
+}
+
+/* ===== Company Card ===== */
+.company-card {
+  min-width: 240px;
+  height: 96px;
+  background: var(--card-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.company-card:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 1px var(--cyan-soft);
+  transform: translateY(-3px);
+}
+
+.company-card img {
+  max-height: 60px;
+  max-width: 200px;
+  object-fit: contain;
+}
+
+/* fallback text */
+.company-card.fallback::after {
+  content: attr(data-name);
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+/* ===== Nav Buttons ===== */
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  border: 1px solid var(--border-dark);
+  background: var(--card-dark);
+  color: var(--cyan);
+  cursor: pointer;
+  display: grid;
+  place-items: center;
+  font-size: 18px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nav-btn:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 1px var(--cyan-soft);
+}
+
+.nav-btn.disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.nav-btn:first-of-type {
+  left: 8px;
+}
+
+.nav-btn:last-of-type {
+  right: 8px;
+}
+
+/* ===== Categories ===== */
+.cats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 18px;
+}
+
+.cat-card {
+  background: var(--card-dark);
+  border: 1px solid var(--border-dark);
+  border-radius: 14px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease, transform 0.2s ease;
+}
+
+.cat-card:hover {
+  border-color: var(--cyan);
+  box-shadow: 0 0 0 1px var(--cyan-soft);
+  transform: translateY(-3px);
+}
+
+.cat-ic {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  display: grid;
+  place-items: center;
+  background: rgba(168, 85, 247, 0.12);
+  color: var(--cyan);
+  font-size: 18px;
+}
+
+.cat-name {
+  color: var(--text-main);
+  font-weight: 600;
+}
+
+.cat-pill {
+  margin-left: auto;
+  font-size: 11px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--cyan);
+  color: var(--cyan);
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 640px) {
+  .company-card {
+    min-width: 200px;
+  }
+}

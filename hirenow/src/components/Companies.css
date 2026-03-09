@@ -1,0 +1,152 @@
+:root {
+  --bg: #050505;
+  --panel: rgba(20, 15, 30, 0.75);
+  --border: rgba(168, 85, 247, 0.25);
+  --border-strong: rgba(168, 85, 247, 0.5);
+  --purple: #a855f7;
+  --purple-soft: #c084fc;
+  --white: #ffffff;
+  --muted: rgba(229, 231, 235, 0.8);
+}
+
+
+.cmp-wrap {
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 2.5rem 1rem 3rem;
+}
+
+
+.cmp-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: var(--white);
+}
+
+.cmp-sub {
+  color: var(--muted);
+  margin-top: 0.4rem;
+}
+
+.cmp-controls {
+  display: flex;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.cmp-input,
+.cmp-select {
+  padding: 0.9rem 1rem;
+  border-radius: 14px;
+  border: 1px solid var(--border);
+  background: rgba(15, 10, 25, 0.6);
+  color: var(--white);
+  outline: none;
+  transition: 0.3s ease;
+}
+
+.cmp-input:focus,
+.cmp-select:focus {
+  border-color: var(--border-strong);
+  box-shadow: 0 0 0 4px rgba(168, 85, 247, 0.15);
+}
+
+
+.cmp-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.2rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 980px) {
+  .cmp-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+  .cmp-grid { grid-template-columns: 1fr; }
+}
+
+
+.cmp-card {
+  position: relative;
+  border-radius: 20px;
+  padding: 1.2rem;
+  background: linear-gradient(160deg, rgba(25,15,40,0.85), rgba(15,10,25,0.7));
+  border: 1px solid var(--border);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  overflow: hidden;
+}
+
+.cmp-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--border-strong);
+  box-shadow: 0 20px 40px rgba(168, 85, 247, 0.25);
+}
+
+.cmp-logo {
+  width: 60px;
+  height: 60px;
+  border-radius: 16px;
+  background: rgba(168, 85, 247, 0.08);
+  border: 1px solid rgba(168, 85, 247, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cmp-logo img {
+  width: 42px;
+  height: 42px;
+  object-fit: contain;
+}
+
+.cmp-info {
+  flex: 1;
+  color: #a855f7;
+}
+
+.cmp-name {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--white);
+}
+
+.cmp-meta {
+  font-size: 0.9rem;
+  color: var(--muted);
+  margin-top: 0.3rem;
+}
+
+/* Jobs Badge */
+.cmp-badge {
+  display: inline-block;
+  margin-top: 0.6rem;
+  padding: 0.35rem 0.7rem;
+  font-size: 0.8rem;
+  border-radius: 999px;
+  background: rgba(168, 85, 247, 0.15);
+  border: 1px solid rgba(168, 85, 247, 0.4);
+  color: var(--purple-soft);
+  font-weight: 600;
+}
+
+.cmp-card::after {
+  content: "";
+  position: absolute;
+  inset: -100px;
+  background: radial-gradient(circle at top left, rgba(168, 85, 247, 0.15), transparent 60%);
+  pointer-events: none;
+}
+
+.cmp-empty {
+  grid-column: 1 / -1;
+  text-align: center;
+  padding: 2rem;
+  border: 1px dashed var(--border);
+  border-radius: 18px;
+  color: var(--muted);
+}

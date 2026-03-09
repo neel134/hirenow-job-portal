@@ -1,0 +1,177 @@
+.empd-page {
+  max-width: 1100px;
+  margin: 22px auto;
+  padding: 16px;
+  color: #fff;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+.empd-loading {
+  color: #fff;
+  padding: 20px;
+}
+
+.empd-top {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.empd-title h2 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: 800;
+}
+
+.empd-title p {
+  margin: 4px 0 0;
+  opacity: 0.75;
+  font-size: 13px;
+}
+
+.empd-actions {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.empd-btn {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: #fff;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: transform 0.15s ease, box-shadow 0.15s ease, background 0.15s ease;
+}
+
+.empd-btn:hover { transform: translateY(-1px); }
+
+.empd-btn.primary {
+  background: linear-gradient(135deg, #c084fc, #67e8f9);
+  color: #050505;
+  border: none;
+}
+
+.empd-btn.ghost { background: rgba(255, 255, 255, 0.04); }
+
+.empd-btn.small {
+  padding: 8px 10px;
+  border-radius: 10px;
+  font-size: 12.5px;
+}
+
+.empd-btn.danger {
+  border-color: rgba(244, 63, 94, 0.5);
+  background: rgba(244, 63, 94, 0.12);
+  color: #fecaca;
+}
+
+.empd-error {
+  background: rgba(244, 63, 94, 0.15);
+  border: 1px solid rgba(244, 63, 94, 0.4);
+  color: #fecaca;
+  padding: 10px 12px;
+  border-radius: 10px;
+  font-size: 13px;
+  margin-bottom: 12px;
+}
+
+.empd-grid {
+  display: grid;
+  grid-template-columns: 360px 1fr;
+  gap: 12px;
+}
+
+.empd-card {
+  background: rgba(15, 15, 25, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 18px;
+  padding: 16px;
+  backdrop-filter: blur(18px);
+}
+
+.empd-card h3 {
+  margin: 0 0 12px;
+  font-size: 16px;
+}
+
+.empd-kv {
+  display: flex;
+  gap: 8px;
+  margin: 6px 0;
+  opacity: 0.9;
+}
+
+.empd-card-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.empd-badge {
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.empd-note {
+  font-size: 12.5px;
+  opacity: 0.75;
+  margin-bottom: 10px;
+}
+
+.empd-empty {
+  opacity: 0.75;
+  padding: 12px;
+  border: 1px dashed rgba(255, 255, 255, 0.16);
+  border-radius: 14px;
+}
+
+.empd-joblist {
+  display: grid;
+  gap: 10px;
+}
+
+.empd-job {
+  display: flex;
+  gap: 12px;
+  justify-content: space-between;
+  padding: 12px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.empd-job-title { font-weight: 800; }
+
+.empd-job-sub {
+  opacity: 0.75;
+  font-size: 13px;
+  margin-top: 2px;
+}
+
+.empd-job-meta {
+  opacity: 0.85;
+  font-size: 12.5px;
+  margin-top: 6px;
+}
+
+.empd-job-actions {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 900px) {
+  .empd-grid {
+    grid-template-columns: 1fr;
+  }
+}
